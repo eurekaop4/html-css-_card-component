@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+
+    --Very-dark-blue : hsl(233, 47%, 7%);
+    --Dark-desaturated : hsl(244, 38%, 16%);
+    --Soft-violet : hsl(277, 64%, 61%);
+    
+    
+    --White : hsl(0, 0%, 100%);
+    --Slightly : hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+body {
+
+    background: var(--Very-dark-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+
+
+}
+
+.card {
+    /* border: 5px solid #ff0000; */
+
+    border-radius: 20px;
+
+    width: 1440px;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+
+.card-left {
+    width: 50%;
+
+    background: var(--Dark-desaturated);
+
+    padding: 5rem;
+
+
+    
+
+}
+
+.card-left h1 {
+    font-size: 2.5rem;
+    color: var(--White);
+
+}
+
+.purple {
+    font-size: 2.5rem;
+    color: var(--Soft-violet)
+}
+
+.card-left p {
+
+    color: var(--Slightly);
+
+    width: 375px;
+
+    margin-top: 2rem;
+
+    margin-bottom: 5rem;
+
+
+}
+
+
+
+.card-left ul {
+    display: flex;
+    list-style: none;
+    color: var(--White);
+}
+
+.card-left ul li {
+    margin-right: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.card-left ul li span {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: var(--Slightly);
+}
+
+
+
+.card-right {
+    width: 50%;
+
+    background: var(--Soft-violet)
+
+}
+
+
+.card-right img {
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5;
+
+    mix-blend-mode: hard-light;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+
+    .card {
+
+        width: 375px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-left, .card-right {
+        width: 100%;
+
+    }
+
+
+    .card-left {
+        order: 2;
+        text-align: center;
+        padding: 3rem;
+
+
+    }
+
+    .card-left h1 {
+
+        font-size: 2rem;
+
+
+    }
+
+    .purple {
+        font-size: 2rem;
+    }
+
+
+    .card-left p {
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-left ul {
+        flex-direction: column;
+    }
+
+    .card-left ul li {
+        margin-right: 0;
+        margin-top: 1.5rem;
+    }
+
+    .card-right {
+        order: 1;
+    }
+
+    .card-right img {
+        display: block;
+
+    }
+
+
+
+
+
+
+}
